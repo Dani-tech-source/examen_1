@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
+import 'routes/app_router.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,  // Usando el router definido en app_router.dart
+      title: 'Aplicación con go_router',
+    );
+  }
+}
         // This is the theme of your application.
         //
         // TRY THIS: Try running your application with "flutter run". You'll see
