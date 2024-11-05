@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'routes/app_router.dart';
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,8 +16,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
