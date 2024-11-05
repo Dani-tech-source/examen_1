@@ -14,6 +14,48 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Menú Principal')),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(color: Colors.blue),
+              child: Text('Menú'),
+            ),
+            ListTile(
+              title: const Text('Inicio'),
+              onTap: () {
+                context.go('/');
+              },
+            ),
+            ListTile(
+              title: const Text('Noticias'),
+              onTap: () {
+                context.go('/news');
+              },
+            ),
+            ListTile(
+              title: const Text('Lista de Tareas'),
+              onTap: () {
+                context.go('/tasks');
+              },
+            ),
+          ],
+        ),
+      ),
+      body: Center(child: Text('Pantalla de inicio')),
+    );
+  }
+}
+
         // This is the theme of your application.
         //
         // TRY THIS: Try running your application with "flutter run". You'll see
